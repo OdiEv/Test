@@ -15,7 +15,7 @@ $(document).ready(function(){
       {
         breakpoint: 1150,
         settings: {
-          arrows: false,
+          arrows: false, // краще залишить
           slidesToShow: 3
         }
       },
@@ -65,9 +65,9 @@ $(document).ready(function(){
   });
 
   $('.send_message').click(function() {
-    $('.popup_contact').fadeIn(500);
+    $('.popup_contact').fadeIn(500); // cash query selectors (var)
     $('.popup_bg').addClass('active');
-    $('.popup_hidden').addClass('active');
+    $('.popup_hidden').addClass('active'); // лишнє
     $('body').addClass('popup_body');
 
     $('.popup_hidden').click(function() {
