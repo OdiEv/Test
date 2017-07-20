@@ -1,0 +1,140 @@
+body
+	font-size: 16px
+	font-family: $default-font
+	font-weight: normal
+	color: $accent
+
+.container
+	max-width: 1315px
+	margin: 0 auto
+	padding: 0 63px
+
+a
+	text-decoration: none
+
+.h1
+	font-size: 62px
+	font-weight: 900
+	letter-spacing: 0.02em
+
+.h2
+	font-size: 35px
+	font-weight: 700
+	text-transform: uppercase
+	color: #2a2a2a
+
+.h3
+	font-size: 42px
+	font-weight: 700
+	color: #fff
+
+.btn
+	display: block
+	padding: 15.5px 85.5px
+	text-transform: uppercase
+	font-weight: 700
+	font-size: 18px
+	transition: all 0.2s ease
+	border: none
+	cursor: pointer
+	outline: none
+	&-white
+		color: #000
+		background-color: #fff
+		&:hover
+			background-color: #eee
+		&:active
+			background-color: darken(#eee, 10%)
+	&-black
+		color: #fff
+		background-color: #1e1e1e
+		&:hover
+			background-color: #a1907e
+		&:active
+			background-color: darken(#a1907e, 20%)
+
+
+input[type="e-mail"],
+input[type="text"],
+input[type="tel"],
+select,
+option,
+textarea
+	width: 100%
+	font-size: 16px
+	color: #3d3d3d
+	border: none
+	border-bottom: 1px solid #c0c0c0
+	outline: none
+	&::placeholder
+		color: #939393
+		font-size: 16px
+		text-transform: uppercase
+select
+	color: #939393
+
+.scroll_top
+	position: fixed
+	right: -120px
+	bottom: 30px
+	width: 50px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	font-size: 25px
+	color: #fff
+	background-color: #756441
+	border-radius: 50%
+	cursor: pointer
+	opacity: 0.5
+	z-index: 50
+	transition: all 0.4s ease
+	&.active
+		right: 30px
+	&:hover
+		opacity: 1
+		color: $accent
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 300
+	background-color: $accent
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -40px
+			top: -40px
+		&:before, &:after
+			content: ''
+			border: 5px solid #323232
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&:before
+			animation: pulse-outer 0.8s ease-in infinite
+		&:after 
+			animation: pulse-inner 0.8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)

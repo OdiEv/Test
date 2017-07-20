@@ -1,0 +1,159 @@
+.topper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&-search
+		height: 50px
+		margin-bottom: 25px
+		.btn-search
+			position: absolute
+			width: 30px
+			height: 50px
+			padding: 0
+			background-color: transparent
+			border: none
+			outline: none
+			cursor: pointer
+			.fa
+				font-size: 18px
+				color: #000
+		input[type="search"]
+			width: 226px
+			height: 100%
+			padding: 15px 0 15px 35px 
+			color: $accent
+			font-size: 16px
+			border: none
+			border-bottom: 1px solid $accent
+			outline: none
+			z-index: 3
+			&::placeholder
+				color: $accent
+				font-size: 16px
+	&-pages
+		display: flex
+		margin-bottom: 25px
+		a
+			margin-right: 40px
+			color: $accent
+			white-space: nowrap
+			&:last-child
+				margin-right: 0
+			span
+				font-weight: 700
+
+.nav
+	padding-bottom: 1px
+	.main-menu
+		position: relative
+		display: flex
+		justify-content: center
+		border-top: 1px solid #e2e2e2
+		border-bottom: 1px solid #e2e2e2
+		&-item
+			padding: 28px 32px 23px
+			cursor: pointer
+			>a
+				text-transform: uppercase
+				color: $accent
+			.sub-menu
+				display: none
+			&:hover
+				>a
+					font-weight: 700
+				.sub-menu
+					display: block
+
+.sub-menu
+	width: 100%
+	position: absolute
+	top: 67px
+	left: 0
+	right: 0
+	padding-top: 22px
+	padding-bottom: 30px
+	background-color: #fff
+	font-size: 22px
+	color: #323232
+	border-top: 1px solid #e2e2e2
+	z-index: 15
+	.container
+		display: flex
+		flex-wrap: nowrap
+	&-pic
+		display: flex
+		flex-direction: column
+		padding-left: 20px
+		margin-right: 40px
+		vertical-align: top
+		&:last-of-type
+			margin-right: 0
+		p
+			text-transform: uppercase
+			margin-bottom: 22px
+		img
+			vertical-align: middle
+			width: 100%
+			height: auto
+	&-list
+		display: flex
+		ul
+			margin-right: 58px
+			margin-top: 30px
+			&:last-child
+				margin-right: 140px
+			li
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+	a
+		color: #323232
+
+.touch-menu
+	display: none
+	padding-bottom: 1px
+	&-inner
+		display: flex
+		border-top: 1px solid #e2e2e2
+		border-bottom: 1px solid #e2e2e2
+		cursor: pointer
+		&:hover
+			a
+				font-weight: 700
+	&-item
+		padding: 10px 20px 10px
+		text-transform: uppercase
+		a
+			color: $accent
+
+.hamburger
+	position: relative
+	width: 35px
+	height: 35px
+	&-icon
+		position: absolute
+		top: 15px
+		width: 35px
+		height: 5px
+		background-color: $accent
+		transition: all 0.3s ease
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 35px
+			height: 5px
+			background-color: $accent
+			transition: all 0.3s ease
+		&:before
+			top: -15px
+		&:after
+			bottom: -15px
+	&.active
+		.hamburger-icon
+			background-color: rgba(0, 0, 0, 0)
+			&:before
+				top: 0
+				transform: rotate(45deg)
+			&:after
+				bottom: 0
+				transform: rotate(135deg)
