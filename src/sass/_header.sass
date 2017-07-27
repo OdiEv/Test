@@ -1,10 +1,10 @@
 .topper
 	display: flex
-	align-items: center
 	justify-content: space-between
 	&-search
 		height: 50px
-		margin-bottom: 25px
+		margin-top: 28px
+		margin-bottom: 60px
 		.btn-search
 			position: absolute
 			width: 30px
@@ -17,7 +17,7 @@
 			.fa
 				font-size: 18px
 				color: #000
-		input[type="search"]
+		.search
 			width: 226px
 			height: 100%
 			padding: 15px 0 15px 35px 
@@ -30,15 +30,23 @@
 			&::placeholder
 				color: $accent
 				font-size: 16px
+	&-logo
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
 	&-pages
 		display: flex
-		margin-bottom: 25px
+		margin-top: 50px
+		margin-bottom: 70px
 		a
 			margin-right: 40px
 			color: $accent
 			white-space: nowrap
 			&:last-child
 				margin-right: 0
+			&:hover
+				color: #a1907e
 			span
 				font-weight: 700
 
@@ -51,9 +59,9 @@
 		border-top: 1px solid #e2e2e2
 		border-bottom: 1px solid #e2e2e2
 		&-item
-			padding: 28px 32px 23px // move padding to link
-			cursor: pointer
 			>a
+				display: inline-block
+				padding: 28px 32px 23px
 				text-transform: uppercase
 				color: $accent
 			.sub-menu
@@ -108,6 +116,8 @@
 					margin-bottom: 0
 	a
 		color: #323232
+		&:hover
+			color: #a1907e
 
 .touch-menu
 	display: none
@@ -116,34 +126,33 @@
 		display: flex
 		border-top: 1px solid #e2e2e2
 		border-bottom: 1px solid #e2e2e2
-		cursor: pointer
 		&:hover
 			a
 				font-weight: 700
 	&-item
 		padding: 10px 20px 10px
-		text-transform: uppercase
-		a
-			color: $accent
 
 .hamburger
 	position: relative
 	width: 35px
 	height: 35px
+	cursor: pointer
 	&-icon
 		position: absolute
 		top: 15px
 		width: 35px
 		height: 5px
 		background-color: $accent
-		transition: all 0.3s ease // не юзать all 
+		transition: opacity 0.3s ease
 		&:before, &:after
 			content: ''
 			position: absolute
 			width: 35px
 			height: 5px
 			background-color: $accent
-			transition: all 0.3s ease
+			transition: top 0.3s ease
+			transition: bottom 0.3s ease
+			transition: transform 0.3s ease
 		&:before
 			top: -15px
 		&:after

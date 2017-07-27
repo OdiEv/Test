@@ -18,8 +18,7 @@
 		padding: 150px 0 195px
 		text-align: center
 		color: #fff
-		background-repeat: no-repeat
-		background-position: center
+		background: no-repeat center
 		background-size: cover
 		.h1
 			margin-bottom: 30px
@@ -29,8 +28,7 @@
 		background-color: #a1907e
 		&-picture
 			flex-basis: 34.6%
-			background-repeat: no-repeat
-			background-position: center
+			background: no-repeat center
 			background-size: cover
 		&-text
 			flex-grow: 1
@@ -57,18 +55,18 @@
 	max-width: 1176px
 	margin: 0 auto
 	position: relative
-	cursor: pointer
 	.fa
 		position: absolute
 		top: 180px
 		font-size: 43px
+		cursor: pointer
+		z-index: 10
 	.fa-chevron-left
 		left: -70px
 	.fa-chevron-right
 		right: -70px
 	.slick-slide
 		outline: none
-		cursor: pointer
 		img
 			margin: 0 auto 45px
 		p
@@ -77,6 +75,9 @@
 			font-weight: 700
 			text-transform: uppercase
 			color: #000
+		&:hover
+			p
+				color: #a1907e
 
 .arrivals
 	padding-top: 162px

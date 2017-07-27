@@ -37,17 +37,33 @@
             </ol>
           </div>
           <div class="column-2">
-            <h2 class="h2">
-              Subscribe
-            </h2>
-            <form class="subscribe">
-              <input type="e-mail" placeholder="e-mail">
-              <h3 class="h3">interested in:</h3>
-              <input type="checkbox" id="Women" checked>
-              <label for="Women">Women Collections</label>
-              <input type="checkbox" id="Men">
-              <label for="Men">Men Collections</label>
-              <input type="text" placeholder="country">
+            <form class="form form-subscribe">
+              <h2 class="h2">
+                Subscribe
+              </h2>
+              <div class="form-subscribe-group">
+                <input class="input input-email" type="e-mail" placeholder="e-mail">
+              </div> 
+              <div class="form-subscribe-group">
+                <legend class="form-subscribe-leg">
+                    interested in:
+                </legend>
+                <div class="form-subscribe-checkbox">
+                  <input class="checkbox" type="checkbox" id="Women" checked>
+                  <label class="label" for="Women">
+                    Women Collections
+                  </label>
+                </div>
+                <div class="form-subscribe-checkbox">
+                  <input class="checkbox" type="checkbox" id="Men">
+                  <label class="label" for="Men">
+                    Men Collections
+                  </label>
+                </div> 
+              </div>
+              <div class="form-subscribe-group">
+                <input class="input input-text" type="text" placeholder="country">
+              </div>
               <button class="btn btn-black">
                 Sign Up
               </button>

@@ -13,30 +13,27 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 1150,
+        breakpoint: 993,
         settings: {
-          arrows: false, // краще залишить
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: false,
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
-        	arrows: false,
           slidesToShow: 1
         }
       }
     ]
     });
 
-   $('.hamburger').click(function(e) {
+  $('.search_now').click(function(a) {
+    a.preventDefault();
+    $('.footer-search').slideToggle();
+    $('.search_now .fa').toggleClass('fa-chevron-down');
+  });
+
+  $('.hamburger').click(function(e) {
     e.preventDefault();
     $('.nav').slideToggle();
     $(this).toggleClass('active');
@@ -65,22 +62,26 @@ $(document).ready(function(){
   });
 
   $('.send_message').click(function() {
-    $('.popup_contact').fadeIn(500); // cash query selectors (var)
-    $('.popup_bg').addClass('active');
-    $('.popup_hidden').addClass('active'); // лишнє
-    $('body').addClass('popup_body');
+    var contact = $('.popup_contact');
+    var overlay = $('.popup_overlay');
+    var hidden = $('.popup_hidden');
+    var btnclose = $('.popup_contact-btn');
+    var body = $('body');
+    
+    contact.fadeIn(500);
+    overlay.addClass('active');
+    body.addClass('popup_body');
 
-    $('.popup_hidden').click(function() {
-      $('.popup_contact').fadeOut();
-      $('.popup_bg').removeClass('active');
-      $('.popup_hidden').removeClass('active');
-      $('body').removeClass('popup_body');
+    hidden.click(function() {
+      contact.fadeOut();
+      overlay.removeClass('active');
+      body.removeClass('popup_body');
     });
 
-    $('.popup_contact-btn').click(function() {
-      $('.popup_contact').fadeOut();
-      $('.popup_bg').removeClass('active');
-      $('body').removeClass('popup_body');
+    btnclose.click(function() {
+      contact.fadeOut();
+      overlay.removeClass('active');
+      body.removeClass('popup_body');
     });
   });
 

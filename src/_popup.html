@@ -1,4 +1,4 @@
-<div class="popup_bg">
+<div class="popup_overlay">
   <div class="popup_hidden"></div>
   <div class="popup_contact">
     <div class="popup_contact-btn">
@@ -12,31 +12,31 @@
       <a href="tel:+48123456789">Tel. +48 123 456 789</a>
       <p>Monday - Friday 09:00 - 18:00</p>
     </div>
-    <form class="popup_contact-data">
-      <div class="field">
-        <input type="text" id="name" name="name" placeholder="Name">
-        <label for="name">Name</label>
+    <form class="form form-data">
+      <div class="form-data-group">
+        <input class="input" type="text" id="name" name="name" required>
+        <label class="label" for="name">Name</label>
       </div>
-      <div class="field">
-        <input type="e-mail" id="email" name="e-mail" placeholder="E-mail">
-        <label for="email">E-mail</label>
+      <div class="form-data-group">
+        <input class="input" type="e-mail" id="email" name="e-mail" required>
+        <label class="label" for="email">E-mail</label>
       </div>
-      <div class="field">
-        <input type="tel" id="telephone" name="telephone" placeholder="Telephone">
-        <label for="telephone">Telephone</label>
+      <div class="form-data-group">
+        <input class="input" type="tel" id="telephone" name="telephone" required>
+        <label class="label" for="telephone">Telephone</label>
       </div>
-      <div class="select">
+      <div class="form-data-select">
         <i class="fa fa-chevron-down"></i>
-        <select>
-          <option value="subject">subject</option>
-          <option value="subject">subject2</option>
-          <option value="subject">subject3</option>
-          <option value="subject">subject4</option>
+        <select class="select">
+          <option class="option" value="subject">subject</option>
+          <option class="option" value="subject">subject2</option>
+          <option class="option" value="subject">subject3</option>
+          <option class="option" value="subject">subject4</option>
         </select>
       </div>
-      <div class="comment">
-        <label for="comment">Comment</label><br>
-        <textarea name="comment" id="comment"></textarea>
+      <div class="form-data-textarea">
+        <label class="label" for="comment">Comment</label><br>
+        <textarea class="textarea" name="comment" id="comment"></textarea>
       </div>
       <button class="btn btn-black">
         Send

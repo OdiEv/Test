@@ -1,17 +1,17 @@
 var	gulp = require('gulp');
-    sass = require('gulp-sass');
-    postcss = require('gulp-postcss');
-    autoprefixer = require('autoprefixer');
-    sourcemaps = require('gulp-sourcemaps');
-    concat = require('gulp-concat');
-    uglify = require('gulp-uglify');
-    rename = require('gulp-rename');
-    del = require('del');
-    imagemin = require('gulp-imagemin');
-    cache = require('gulp-cache');
-    notify = require("gulp-notify");
-    include = require("gulp-include");
-    browserSync = require('browser-sync');
+var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var del = require('del');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var notify = require("gulp-notify");
+var include = require("gulp-include");
+var browserSync = require('browser-sync');
 
 gulp.task('common-js', function() {
 	return gulp.src([
